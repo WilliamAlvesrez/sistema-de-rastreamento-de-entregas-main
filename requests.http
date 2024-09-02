@@ -1,0 +1,78 @@
+# Pacote
+#---------------------------
+
+###
+GET /pacotes
+Host: localhost:8080
+
+###
+POST /pacotes
+Host: localhost:8080
+Content-Type: application/json
+
+{
+		"idUnico": "ABCD1234567",
+		"destinatario": "Hermenegildo Silva",
+		"endereco": {
+			"id":1
+		},
+		"status": "pendente"
+}
+
+###
+GET /pacotes/2
+Host: localhost:8080
+
+###
+PUT /pacotes/1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+	"status": "em trânsito"
+}	 
+
+###
+PUT /pacotes/2
+Host: localhost:8080
+Content-Type: application/json
+
+{
+	"status": "teste"
+}	 
+
+###
+DELETE /pacotes/1
+Host: localhost:8080
+
+
+# Rastreamento
+#----------------------------------------------------
+
+###
+GET /rastreamentos/1
+Host: localhost:8080
+
+
+# Endereco
+#--------------------------------------------------------
+###
+GET /enderecos
+Host: localhost:8080
+
+###
+GET /enderecos/11
+Host: localhost:8080
+
+###
+POST /enderecos
+Host: localhost:8080
+Content-Type: application/json
+
+{
+	"rua": "Rua das Flores",
+	"numero": 123,
+	"cidade": "São Paulo",
+	"estado": "SP",
+	"cep": "12345-678"
+}
